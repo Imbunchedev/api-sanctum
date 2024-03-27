@@ -13,12 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        $this->call([
+            PositionsSeeder::class,
+            PlayerSeeder::class,
+        ]);
+        
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test2@example.com',
-            'password' => 'Taricay1!'
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test2@example.com',
+        //     'password' => 'Taricay1!'
+        // ]);
     }
 }
